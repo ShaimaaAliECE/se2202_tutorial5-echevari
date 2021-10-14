@@ -12,7 +12,7 @@ createGameBoard()
 function createGameBoard()
 {
     let cells = document.querySelectorAll("td");
-    let brackets = `<button id='edit-btn'>[ ]</button>`
+    let brackets = `<button id='edit-btn'>[ ]</button>`;
 
     for (let i = 0; i < cells.length; i++){
         cells[i].innerHTML = brackets;
@@ -36,22 +36,22 @@ function takeCell(event)
         When the button is clicked, the space inside its square brackets is replaced by the value in the nextPlayer before switching it
     */
 
-        if (clickButton.innerText === "[ ]"){
+    if (clickButton.innerText === "[ ]"){
 
-            if(nextPlayer === 'X'){
-                clickButton.innerText = "[" + nextPlayer+ "]";
-                nextPlayer = "O";
-                clickButton.disabled = true;
-                newNextPlayer.innerHTML = nextPlayer;
-            }
-
-            else if (nextPlayer === 'O'){
-                clickButton.innerText = "[" + nextPlayer + "]";
-                nextPlayer = "X";
-                clickButton.disabled = true;
-                newNextPlayer.innerHTML = nextPlayer;
-            }
+        if(nextPlayer === 'X'){
+            clickButton.innerText = "[" + nextPlayer+ "]";
+            nextPlayer = "O";
+            clickButton.disabled = true;
+            newNextPlayer.innerHTML = nextPlayer;
         }
+
+        else if (nextPlayer === 'O'){
+            clickButton.innerText = "[" + nextPlayer + "]";
+            nextPlayer = "X";
+            clickButton.disabled = true;
+            newNextPlayer.innerHTML = nextPlayer;
+        }
+    }
 
     // Make sure the button is clickable only once (I didn't mention how to do that, look it up :) )
 
