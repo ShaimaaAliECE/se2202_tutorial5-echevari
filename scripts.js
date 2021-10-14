@@ -3,7 +3,7 @@ let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the gam
 //initialize the game
 
 // use the value stored in the nextPlayer variable to indicate who the next player is
-let newNextPlayer = document.querySelector("#next -lbl");
+let newNextPlayer = document.querySelector("#next-lbl");
 newNextPlayer.innerHTML = nextPlayer;
 
 //This call will create the buttons needed for the gameboard.
