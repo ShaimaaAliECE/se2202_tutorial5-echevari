@@ -13,6 +13,10 @@ function createGameBoard()
 {
     let cells = document.querySelectorAll("td");
     let brackets = `<button id='edit-btn'>[ ]</button>`
+
+    for (let i = 0; i < cells.length; i++){
+        cells[i].innerHTML = brackets;
+    }
     // Programatically add a button with square brackets enclosing an empty space to each cell in the gameboard
    
 }
@@ -33,12 +37,14 @@ function takeCell(event)
     */
 
         if (clickButton.innerText === "[ ]"){
+
             if(nextPlayer === 'X'){
                 clickButton.innerText = "[" + nextPlayer+ "]";
-                newNextPlayer = 0;
+                nextPlayer = "O";
                 clickButton.disabled = true;
                 newNextPlayer.innerHTML = nextPlayer;
             }
+
             else if (nextPlayer === 'O'){
                 clickButton.innerText = "[" + nextPlayer + "]";
                 nextPlayer = "X";
